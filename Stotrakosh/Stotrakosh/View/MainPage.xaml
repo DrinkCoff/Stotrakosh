@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Stotrakosh"
+             x:Class="Stotrakosh.MainPage">
+
+    <ContentPage.Content>
+        <ListView x:Name="listView" SeparatorVisibility="None" ItemsSource="{x:Static local:MainPageViewModel.Stotras}" ItemSelected="StotraSelection">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="2,15">
+                            <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand" FontSize="10" FontFamily="" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Settings" Clicked="OnSettingsTap" />
+    </ContentPage.ToolbarItems>
+
+</ContentPage>
