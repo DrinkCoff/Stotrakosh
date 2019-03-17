@@ -108,6 +108,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\settings.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\DatabaseFiles.xml" />
+  </ItemGroup>
   <Import Project="..\Stotrakosh\Stotrakosh.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

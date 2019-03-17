@@ -20,7 +20,7 @@ namespace Stotrakosh
             if (File.Exists(path: databaseFilePath))
             {
                 var db = new SQLiteConnection(databaseFilePath);
-                db.CreateTable<Stotra>();
+                db.CreateTable<StotraInDb>();
 
                 var values = db.Query<StotraInDb>(@"select * from Stotras");
 
@@ -56,13 +56,8 @@ namespace Stotrakosh
                 default:
                     break;
             }
-
-            string directory = ""; // Android.OS.Environment.ExternalStorageDirectory.ToString();
-
-            if(true) // Android
-            {
-                // directory = Android.OS.Environment.ExternalStorageDirectory.ToString();
-            }
+            
+            string directory = Settings.DatabaseDirectory;
 
             string databasePath = Path.Combine(directory, databaseName);
 

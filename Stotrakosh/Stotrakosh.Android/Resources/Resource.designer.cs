@@ -106,6 +106,25 @@ namespace Stotrakosh.Droid
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0f0000
+			public const int databaseName = 2131689472;
+			
+			// aapt resource value: 0x7f0f0001
+			public const int databasePath = 2131689473;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			

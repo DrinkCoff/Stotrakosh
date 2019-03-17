@@ -29,6 +29,9 @@ namespace Stotrakosh
         private const string LanguageKey = "languageKey";
         private static readonly string LanguageDefault = "संस्कृत (Sanskrit)";
 
+        private const string DatabasePathKey = "databasePathKey";
+        private static readonly string DatabasePathDefault = "";
+
         #endregion
 
         public static UInt16 FontSize
@@ -55,5 +58,16 @@ namespace Stotrakosh
             }
         }
 
+        public static string DatabaseDirectory
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(DatabasePathKey, DatabasePathDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(DatabasePathKey, value);
+            }
+        }
     }
 }

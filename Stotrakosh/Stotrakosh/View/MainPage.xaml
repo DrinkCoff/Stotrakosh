@@ -19,7 +19,7 @@
     </ContentPage.Content>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Settings" Clicked="OnSettingsTap" />
+        <ToolbarItem Icon="@drawable/settings.png" Clicked="OnSettingsTap" />
     </ContentPage.ToolbarItems>
 
 </ContentPage>
