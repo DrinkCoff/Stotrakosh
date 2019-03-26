@@ -9,8 +9,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="2,15">
-                            <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand" FontSize="10" FontFamily="" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand" FontSize="{x:Static local:Settings.FontSize}" FontFamily="" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

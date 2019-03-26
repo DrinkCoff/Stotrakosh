@@ -24,7 +24,7 @@ namespace Stotrakosh
         #region Setting Constants
 
         private const string FontSizeKey = "fontSizeKey";
-        private static readonly UInt16 FontSizeDefault = 16;
+        private static readonly double FontSizeDefault = 16.0;
 
         private const string LanguageKey = "languageKey";
         private static readonly string LanguageDefault = "संस्कृत (Sanskrit)";
@@ -34,11 +34,11 @@ namespace Stotrakosh
 
         #endregion
 
-        public static UInt16 FontSize
+        public static double FontSize
         {
             get
             {
-                return Convert.ToUInt16(AppSettings.GetValueOrDefault(FontSizeKey, FontSizeDefault));
+                return Convert.ToDouble(AppSettings.GetValueOrDefault(FontSizeKey, FontSizeDefault));
             }
             set
             {

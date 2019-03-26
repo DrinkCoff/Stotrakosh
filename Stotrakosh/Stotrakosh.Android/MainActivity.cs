@@ -55,7 +55,7 @@ namespace Stotrakosh.Droid
         private void CopyDatabasesFromAsset()
         {
             //string databaseFileName = Helpers.Settings.DatabaseName;
-            string[] databseFileNames = Resources.GetStringArray(Resource.Array.databaseName);
+            string[] databseFileNames = Resources.GetStringArray(Resource.Array.DatabaseNames);
             Settings.DatabaseDirectory = Android.OS.Environment.ExternalStorageDirectory.ToString();
 
             foreach (string databaseFileName in databseFileNames)

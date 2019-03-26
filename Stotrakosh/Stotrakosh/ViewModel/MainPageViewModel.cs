@@ -13,7 +13,5 @@ namespace Stotrakosh
         {
             MainPageViewModel.Stotras = DataSource.GetStotras();
         }
-
-
     }
 }

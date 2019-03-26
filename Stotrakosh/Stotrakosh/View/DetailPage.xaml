@@ -6,10 +6,13 @@
     <ContentPage.Content>
         
         <StackLayout>
-            <Label Text="{Binding CurrentStotraLyrics}"
-                   FontSize="{Binding CurrentFontSize}"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+            <ScrollView>
+                <Label Text="{Binding CurrentStotraLyrics}"
+                       FontSize="{x:Static local:Settings.FontSize}"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"/>
+            </ScrollView>
         </StackLayout>
         
     </ContentPage.Content>

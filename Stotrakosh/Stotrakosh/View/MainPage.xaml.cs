@@ -23,5 +23,11 @@ namespace Stotrakosh
         {
             this.Navigation.PushAsync(new DetailPage((Stotra)((ListView)sender).SelectedItem));
         }
+
+        protected override void OnAppearing()
+        {
+            listView.ItemsSource = DataSource.GetStotras();
+            base.OnAppearing();
+        }
     }
 }

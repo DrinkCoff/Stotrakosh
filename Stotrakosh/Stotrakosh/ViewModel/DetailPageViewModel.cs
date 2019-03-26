@@ -9,7 +9,7 @@ namespace Stotrakosh
     {
         private Stotra currentStotra;
         public string CurrentStotraLyrics { get { return currentStotra.Lyrics; } }
-        public UInt16 CurrentFontSize { get { return Settings.FontSize; } }
+        public double CurrentFontSize { get { return Settings.FontSize; } }
 
         public DetailPageViewModel(Stotra stotra)
         {

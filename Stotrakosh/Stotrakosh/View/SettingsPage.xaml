@@ -9,23 +9,27 @@
             
             <Label Text="FontSize" 
                    FontAttributes="Bold" 
-                   HorizontalOptions="Center" />
+                   HorizontalOptions="Center"
+                   Margin="10,10,10,10"/>
             
             <Picker Title="FontSize" 
                     ItemsSource="{Binding FontSizes}" 
                     SelectedItem="{Binding SelectedFontSize}"
                     HorizontalOptions="Center" 
-                    SelectedIndexChanged="FontSize_SelectedIndexChanged"/>
+                    SelectedIndexChanged="FontSize_SelectedIndexChanged"
+                    Margin="10,10,10,10"/>
 
             <Label Text="Language" 
                    FontAttributes="Bold" 
-                   HorizontalOptions="Center" />
+                   HorizontalOptions="Center"
+                   Margin="10,10,10,10"/>
 
             <Picker Title="Language" 
                     ItemsSource="{Binding Languages}" 
                     SelectedItem="{Binding SelectedLanguage}"
                     HorizontalOptions="Center" 
-                    SelectedIndexChanged="Language_SelectedIndexChanged"/>
+                    SelectedIndexChanged="Language_SelectedIndexChanged"
+                    Margin="10,15,10,10"/>
             
         </StackLayout>
         

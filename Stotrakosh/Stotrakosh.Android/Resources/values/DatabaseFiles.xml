@@ -1,10 +1,5 @@
 ﻿<resources>
-  <string-array name="databaseName">
-    <item>stotra-Sanskrit.db3</item>
-    <item>stotra-Gujarati.db3</item>
-    <item>stotra-English.db3</item>
-  </string-array>
-  <string-array name="databasePath">
+  <string-array name="DatabaseNames">
     <item>stotra-Sanskrit.db3</item>
     <item>stotra-Gujarati.db3</item>
     <item>stotra-English.db3</item>

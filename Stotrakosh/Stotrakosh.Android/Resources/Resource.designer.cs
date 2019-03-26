@@ -110,10 +110,7 @@ namespace Stotrakosh.Droid
 		{
 			
 			// aapt resource value: 0x7f0f0000
-			public const int databaseName = 2131689472;
-			
-			// aapt resource value: 0x7f0f0001
-			public const int databasePath = 2131689473;
+			public const int DatabaseNames = 2131689472;
 			
 			static Array()
 			{
