@@ -21,13 +21,14 @@ namespace Stotrakosh
         private void FontSize_SelectedIndexChanged(object sender, EventArgs e)
         {
             var picker = sender as Picker;
-            //Settings.FontSize = (UInt16)picker.SelectedItem;
+            Settings.FontSize = Converter.StringToDouble((string)picker.SelectedItem);
         }
 
         private void Language_SelectedIndexChanged(object sender, EventArgs e)
         {
             var picker = sender as Picker;
-            //Select = (string)picker.SelectedItem;
+            Settings.Language = (string)picker.SelectedItem;
+            MainPageViewModel.UpdateStotras();
         }
     }
 }

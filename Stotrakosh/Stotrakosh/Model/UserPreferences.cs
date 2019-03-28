@@ -11,16 +11,14 @@ namespace Stotrakosh
         {
         }
 
-        public static IList<UInt16> GetFontSizes()
+        public static IList<string> GetFontSizes()
         {
-            List<UInt16> fontSizes = new List<UInt16>()
+            List<string> fontSizes = new List<string>()
             {
-                10,
-                12,
-                14,
-                16,
-                18,
-                30
+                "Micro",
+                "Small",
+                "Medium",
+                "Large"
             };
 
             return fontSizes;

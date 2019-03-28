@@ -2,32 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Stotrakosh"
-             x:Class="Stotrakosh.SettingsPage">
+             x:Class="Stotrakosh.SettingsPage"
+             Title="Settings">
 
     <ScrollView>
         <StackLayout Margin="20,35,20,20">
             
             <Label Text="FontSize" 
                    FontAttributes="Bold" 
-                   HorizontalOptions="Center"
+                   HorizontalOptions="Fill"
                    Margin="10,10,10,10"/>
             
             <Picker Title="FontSize" 
                     ItemsSource="{Binding FontSizes}" 
                     SelectedItem="{Binding SelectedFontSize}"
-                    HorizontalOptions="Center" 
+                    HorizontalOptions="Fill" 
                     SelectedIndexChanged="FontSize_SelectedIndexChanged"
                     Margin="10,10,10,10"/>
 
             <Label Text="Language" 
                    FontAttributes="Bold" 
-                   HorizontalOptions="Center"
+                   HorizontalOptions="Fill"
                    Margin="10,10,10,10"/>
 
             <Picker Title="Language" 
                     ItemsSource="{Binding Languages}" 
                     SelectedItem="{Binding SelectedLanguage}"
-                    HorizontalOptions="Center" 
+                    HorizontalOptions="Fill" 
                     SelectedIndexChanged="Language_SelectedIndexChanged"
                     Margin="10,15,10,10"/>
             

@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\DataSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Stotra.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\UserPreferences.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Converter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\DatabaseOp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\DetailPageViewModel.cs" />

@@ -24,7 +24,7 @@ namespace Stotrakosh
         #region Setting Constants
 
         private const string FontSizeKey = "fontSizeKey";
-        private static readonly double FontSizeDefault = 16.0;
+        private static readonly double FontSizeDefault = 18.0;
 
         private const string LanguageKey = "languageKey";
         private static readonly string LanguageDefault = "संस्कृत (Sanskrit)";

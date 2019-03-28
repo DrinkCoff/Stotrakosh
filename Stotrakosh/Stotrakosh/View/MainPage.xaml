@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Stotrakosh"
-             x:Class="Stotrakosh.MainPage">
+             x:Class="Stotrakosh.MainPage"
+             Title="Main Page">
 
     <ContentPage.Content>
-        <ListView x:Name="listView" SeparatorVisibility="None" ItemsSource="{x:Static local:MainPageViewModel.Stotras}" ItemSelected="StotraSelection">
+        <ListView x:Name="listView" SeparatorVisibility="Default" SeparatorColor="Black" ItemsSource="{x:Static local:MainPageViewModel.Stotras}" ItemSelected="StotraSelection">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

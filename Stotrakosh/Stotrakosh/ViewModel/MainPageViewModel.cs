@@ -13,5 +13,15 @@ namespace Stotrakosh
         {
             MainPageViewModel.Stotras = DataSource.GetStotras();
         }
+
+        public static void UpdateStotras()
+        {
+            MainPageViewModel.Stotras.Clear();
+            ObservableCollection<Stotra> currentStotras = DataSource.GetStotras();
+            foreach (Stotra item in currentStotras)
+            {
+                Stotras.Add(item);
+            }
+        }
     }
 }
