@@ -28,7 +28,7 @@ namespace Stotrakosh
         {
             var picker = sender as Picker;
             Settings.Language = (string)picker.SelectedItem;
-            MainPageViewModel.UpdateStotras();
+            AllStotrasPageViewModel.UpdateStotras();
         }
     }
 }

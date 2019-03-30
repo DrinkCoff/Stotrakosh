@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\App.xaml" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\MainPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\AllStotrasPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Model\DataSource.cs" />
@@ -19,8 +19,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Converter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\DatabaseOp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\FavoriteStotrasPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\DetailPageViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\AllStotrasPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SettingsPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)View\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -28,8 +29,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)View\DetailPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\AllStotrasPage.xaml.cs">
+      <DependentUpon>AllStotrasPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\FavoriteStotrasPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)View\SettingsPage.xaml.cs">
       <SubType>Code</SubType>
@@ -42,6 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\FavoriteStotrasPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>

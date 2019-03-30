@@ -1,26 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Stotrakosh"
+             xmlns:local="clr-namespace:Stotrakosh"            
              x:Class="Stotrakosh.MainPage"
-             Title="Main Page">
+            Title="Stotrakosh">
+    
+    <local:AllStotrasPage />
+    <local:FavoriteStotrasPage />
+    <local:SettingsPage />
 
-    <ContentPage.Content>
-        <ListView x:Name="listView" SeparatorVisibility="Default" SeparatorColor="Black" ItemsSource="{x:Static local:MainPageViewModel.Stotras}" ItemSelected="StotraSelection">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand" FontSize="{x:Static local:Settings.FontSize}" FontFamily="" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </ContentPage.Content>
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="@drawable/settings.png" Clicked="OnSettingsTap" />
-    </ContentPage.ToolbarItems>
-
-</ContentPage>
+</TabbedPage>

@@ -12,6 +12,7 @@ namespace Stotrakosh
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new AllStotrasPage());
         }
 
         protected override void OnStart()

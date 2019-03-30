@@ -9,14 +9,17 @@ namespace Stotrakosh
     {
         private string name;
         private string lyrics;
+        private bool isFavorite;
 
         public string Name { get { return name; } }
         public string Lyrics { get { return lyrics; } }
-        
-        public Stotra(string name, string lyrics)
+        public bool IsFavorite { get { return isFavorite; } }
+
+        public Stotra(string name, string lyrics, bool isFavorite)
         {
             this.name = name;
             this.lyrics = lyrics;
+            this.isFavorite = isFavorite;
         }
     }
 
@@ -29,5 +32,7 @@ namespace Stotrakosh
         public string Name { get; set; }
         [MaxLength(10000)]
         public string Content { get; set; }
+        [MaxLength(8)]
+        public int IsFavorite { get; set; }
     }
 }

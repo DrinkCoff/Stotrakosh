@@ -28,7 +28,7 @@ namespace Stotrakosh
                 {
                     foreach (StotraInDb stotraInDb in values)
                     {
-                        stotras.Add(new Stotra(stotraInDb.Name, stotraInDb.Content));
+                        stotras.Add(new Stotra(stotraInDb.Name, stotraInDb.Content, Convert.ToBoolean(stotraInDb.IsFavorite)));
                     }
                 }
             }

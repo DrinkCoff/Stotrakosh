@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Stotrakosh"
+             x:Class="Stotrakosh.AllStotrasPage"
+             Title="All Stotras">
+
+    <ContentPage.Content>
+        <ListView x:Name="listView" SeparatorVisibility="Default" SeparatorColor="Black" ItemsSource="{x:Static local:AllStotrasPageViewModel.Stotras}" ItemSelected="StotraSelection">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand" FontSize="{x:Static local:Settings.FontSize}" FontFamily="" />
+                            <ImageButton Source="@drawable/settings.png" Clicked="OnFavoriteTap" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Icon="@drawable/settings.png" Clicked="OnSettingsTap" />
+    </ContentPage.ToolbarItems>-->
+
+</ContentPage>
