@@ -64,12 +64,39 @@ namespace Stotrakosh
             return databasePath;
         }
 
-        public static void DatabaseFileCheck(string databaseFilePath)
+        public static void UpdateIsFavorite(string stotraName)
+        {
+            string databasePath = GetDatabasePath();
+
+            if (DatabaseFileCheck(databasePath))
+            {
+                var db = new SQLiteConnection(databasePath);
+                db.CreateTable<StotraInDb>();
+
+                var values = db.Query<StotraInDb>(@"select * from Stotras where name = '" + stotraName + "'");
+
+                if (values.Count == 1)
+                {
+                    int isFavoriteVal = values[0].IsFavorite;
+                    isFavoriteVal = (isFavoriteVal == 1) ? 0 : 1;
+
+                    values = db.Query<StotraInDb>(@"update Stotras set IsFavorite = " + isFavoriteVal.ToString() + " where name = '" + stotraName + "'");
+
+                    if (values.Count == 1)
+                    {
+
+                    }
+                }
+            }
+        }
+
+        public static bool DatabaseFileCheck(string databaseFilePath)
         {
             if(!File.Exists(databaseFilePath))
             {
-
+                return false;
             }
+            return true;
         }
 
     }

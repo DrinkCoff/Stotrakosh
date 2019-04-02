@@ -21,7 +21,11 @@ namespace Stotrakosh
 
         void OnFavoriteTap(object sender, EventArgs e)
         {
+            string stotraName = ((ImageButton)sender).CommandParameter.ToString();
 
+            DatabaseOp.UpdateIsFavorite(stotraName);
+
+            listView.ItemsSource = DataSource.GetStotras();
         }
 
         void StotraSelection(object sender, SelectedItemChangedEventArgs e)

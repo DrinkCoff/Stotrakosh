@@ -13,7 +13,7 @@ namespace Stotrakosh
 
         public string Name { get { return name; } }
         public string Lyrics { get { return lyrics; } }
-        public bool IsFavorite { get { return isFavorite; } }
+        public bool IsFavorite { get { return isFavorite; } set { } }
 
         public Stotra(string name, string lyrics, bool isFavorite)
         {

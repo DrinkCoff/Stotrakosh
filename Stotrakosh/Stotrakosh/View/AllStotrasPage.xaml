@@ -12,7 +12,18 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand" FontSize="{x:Static local:Settings.FontSize}" FontFamily="" />
-                            <ImageButton Source="@drawable/settings.png" Clicked="OnFavoriteTap" />
+                            
+                            <ImageButton CommandParameter="{Binding Name}" Clicked="OnFavoriteTap">
+                                <ImageButton.Triggers>
+                                    <DataTrigger TargetType="ImageButton" Binding="{Binding IsFavorite}" Value="False">
+                                                <Setter Property="Source" Value="@drawable/unfavorite.png"/>
+                                            </DataTrigger >
+                                    <DataTrigger  TargetType="ImageButton" Binding="{Binding IsFavorite}" Value="True">
+                                                <Setter Property="Source" Value="@drawable/favorite.png"/>
+                                            </DataTrigger >
+                                </ImageButton.Triggers>                                
+                            </ImageButton>
+                            
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
