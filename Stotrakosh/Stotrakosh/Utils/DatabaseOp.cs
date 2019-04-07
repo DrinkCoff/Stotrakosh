@@ -22,7 +22,9 @@ namespace Stotrakosh
                 var db = new SQLiteConnection(databaseFilePath);
                 db.CreateTable<StotraInDb>();
 
-                var values = db.Query<StotraInDb>(@"select * from Stotras");
+                string query = @"select * from Stotras";
+
+                var values = db.Query<StotraInDb>(query);
 
                 if (values.Count > 0)
                 {

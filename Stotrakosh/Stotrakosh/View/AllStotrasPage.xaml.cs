@@ -14,11 +14,6 @@ namespace Stotrakosh
             InitializeComponent();
         }
 
-        void OnSettingsTap(object sender, EventArgs e)
-        {
-            this.Navigation.PushAsync(new SettingsPage());
-        }
-
         void OnFavoriteTap(object sender, EventArgs e)
         {
             string stotraName = ((ImageButton)sender).CommandParameter.ToString();

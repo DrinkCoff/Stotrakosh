@@ -4,9 +4,12 @@
              xmlns:local="clr-namespace:Stotrakosh"            
              x:Class="Stotrakosh.MainPage"
             Title="Stotrakosh">
-    
+
     <local:AllStotrasPage />
     <local:FavoriteStotrasPage />
-    <local:SettingsPage />
-
+    
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Icon="@drawable/settings.png" Clicked="OnSettingsTap" />
+    </TabbedPage.ToolbarItems>
+    
 </TabbedPage>

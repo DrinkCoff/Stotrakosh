@@ -16,5 +16,10 @@ namespace Stotrakosh
         {
             InitializeComponent();
         }
+
+        void OnSettingsTap(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new SettingsPage());
+        }
     }
 }
